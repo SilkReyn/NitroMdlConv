@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroMdlConv", "NitroMdlConv.csproj", "{BED6BE65-2403-4B7F-ABBB-D4A2E29959C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroMdlConv_Test", "NitroMdlConv_Test\NitroMdlConv_Test.csproj", "{A2D36BDB-EC83-42F5-885E-D36F57205EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BED6BE65-2403-4B7F-ABBB-D4A2E29959C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED6BE65-2403-4B7F-ABBB-D4A2E29959C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED6BE65-2403-4B7F-ABBB-D4A2E29959C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED6BE65-2403-4B7F-ABBB-D4A2E29959C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D36BDB-EC83-42F5-885E-D36F57205EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D36BDB-EC83-42F5-885E-D36F57205EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D36BDB-EC83-42F5-885E-D36F57205EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D36BDB-EC83-42F5-885E-D36F57205EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {701BA18A-4F54-4E16-ACD8-D1525E8FA8A2}
+	EndGlobalSection
+EndGlobal
