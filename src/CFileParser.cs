@@ -93,13 +93,17 @@ namespace NitroMdlConv
                     if (file.IsMorph)
                     {
                         if ((cancel = !CMeshParser.TryParseMorph(reader, out Mdl.CMorph morph)) ||
-                            (null == hierachy.meshes) || !hierachy.meshes.Any())  //< not a reason to cancel
+                            (null == hierachy.meshes) || !hierachy.meshes.Any(msh => msh != null))  //< not a reason to cancel
                         {
                             break;
                         }
-                        currMesh = hierachy.meshes
-                            .Where(msh => msh.VerticesCount() == morph.VerticesCount())
-                            .First(msh => file.Filename.Contains(msh.Name))?.CreateMorphedMesh(morph);
+                        var matches = hierachy.meshes.Where(
+                            msh => msh.VerticesCount() == morph.VerticesCount() &&
+                            file.Filename.Contains(msh.Name));
+                        if (matches.Any())
+                        {
+                            currMesh = matches.First()?.CreateMorphedMesh(morph);
+                        }
                     } else {
                         if (cancel = !CMeshParser.TryParse(reader, out currMesh))
                         {
@@ -107,7 +111,7 @@ namespace NitroMdlConv
                         }
                         currMesh.OriginName = file.Filename;
                     }
-                    if (null != currMesh)
+                    if (null != currMesh && currMesh.IsValid())
                     {
                         parsedMeshes.Add(currMesh);
                     }

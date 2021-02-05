@@ -150,10 +150,10 @@ namespace NitroMdlConv
             }
             reader.SeekBlockEnd();  // end mesh
 
-            if (!mesh.IsValid())
-            {
-                return false;
-            }
+            //if (!mesh.IsValid())
+            //{
+            //    return false;
+            //}
             parsedMesh = mesh;
             return passed;
             

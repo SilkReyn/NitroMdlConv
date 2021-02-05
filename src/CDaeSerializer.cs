@@ -625,7 +625,7 @@ namespace NitroMdlConv
                         string nodeName;
                         for (int fn=1; fn<nodesList.Count; ++fn)
                         {
-                            if (!String.IsNullOrWhiteSpace(nodeName=nodesList[fn].Name))
+                            if (!String.IsNullOrWhiteSpace(nodeName=nodesList[fn].Name) && (baseMeshes.Count() > (fn-1)))
                             {
                                 // This fails when multiple meshes contain same name fragment:
                                 //boundMaterialNames: data.meshes.Find(msh => nodeName.Contains(msh.Name))?.MaterialSlots.Select(slot => slot.name),
